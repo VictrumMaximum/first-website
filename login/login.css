@@ -24,3 +24,7 @@ input {
 #pwd {
 	margin-top: 5px;
 }
+
+#email {
+	display: block;
+}

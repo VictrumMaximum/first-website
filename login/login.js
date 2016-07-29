@@ -1,9 +1,10 @@
+var id;
+
 function login() {
 	var uname = $("#uname").val();
 	var pwd = $("#pwd").val();
 	
 	if(uname && pwd) {
-		var registered = true;
 		
 		$.ajax
 		({
@@ -11,13 +12,14 @@ function login() {
 			url: "http://localhost:3000/loginTry",
 			dataType: "json",
 			ContentType: "application/json",			
-			data: {uname, pwd},
-			success: function(data) {console.log(data);}
+			data: {uname, pwd}
+		}).done(function(data) {
+			if(data.id) {
+				id = data.id;
+				window.location.href = "http://localhost:3000/home/home.html";
+			}
 		});
 		
-		if(registered) {
-			loadIndex();
-		}
 		
 	}
 	else {
@@ -26,6 +28,10 @@ function login() {
 	
 }
 
-function loadIndex() {
-	console.log("logged in!");
+function register() {
+	console.log($("#email").css("display"));
+	if($("#email").css("display") == "none") {
+		$("#email").css("display", "block");
+	}
+	
 }

@@ -4,7 +4,8 @@
 		
 		<link rel="stylesheet" type="text/css" href="login.css">
 		<script src="login.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+		<script src="jquery-3.1.0.min.js"></script>
 	</head>
 	
 	<body>
@@ -13,7 +14,10 @@
 			<form>
 				<input type="text" placeholder="username" id="uname">
 				<input type="text" placeholder="password" id="pwd">
+				
 				<input type="button" value="Login" onclick="login()">
+				<input type="text" placeholder="email" id="email">
+				<input type="button" value="Register" onclick="register()">
 			</form>
 		</div>
 	</body>
